@@ -10,11 +10,23 @@ const Container = styled.View`
   padding: 20px 20px;
   flex-direction: column;
 `;
+const FullContent = styled.View`
+  flex: 1;
+  width: 100%;
+`;
 
-const Header = styled.View`
+const Header = styled.ScrollView.attrs({
+  justifyContent: 'center',
+})`
   width: 100%;
   flex: 1;
-  justify-content: center;
+`;
+const TabTitle = styled.Text`
+  font-size: 22px;
+  font-weight: bold;
+  flex:1;
+  margin-left:18px;
+  color: grey;
 `;
 const MainTitle = styled.Text`
   font-size: 22px;
@@ -25,6 +37,26 @@ const SubTitle = styled.Text`
   color: grey;
   font-size: 14px;
   font-weight: normal;
+  margin-bottom: 10px;
+`;
+const MultipleInputField = styled.View`
+  /* background-color: #f0f1f2; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+`;
+
+const InputCode = styled.TextInput`
+  margin:5px;
+  background-color: #f0f1f2;
+  flex: 1;
+  border-radius: 5px;
+  padding:15px;
+  align-items: center;
+  justify-content: center;
 `;
 const InputField = styled.View`
   background-color: #f0f1f2;
@@ -33,7 +65,7 @@ const InputField = styled.View`
   justify-content: space-between;
   width: 100%;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 5px 15px;
   padding-left: 20px;
 `;
@@ -72,6 +104,8 @@ const InternalButton = styled.Text`
 
 const EnvolveLogo = styled.View`
   margin: 55px 0 0 0;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ContainerBackground = styled.ImageBackground`
@@ -86,10 +120,22 @@ const ContainerBackground = styled.ImageBackground`
   flex-direction: column;
 `;
 
+const TopHeaderBar = styled.View`
+  width:100%;
+  flex-direction: row;
+  margin-top:40px;
+  align-items: center;
+  justify-content:space-between;
+  padding:0 15px;
+`
+
+
 export {
   Container,
+  FullContent,InputCode,
   Header,
-  MainTitle,
+  TabTitle,
+  MainTitle,MultipleInputField,
   SubTitle,
   InputField,
   Input,
@@ -99,4 +145,5 @@ export {
   InternalButton,
   EnvolveLogo,
   ContainerBackground,
+  TopHeaderBar
 };

@@ -37,8 +37,9 @@ const Signup = props => {
       tabTitle: 'Confirme sua identidade',
       customBanner: <ConfirmYourBanner />,
       title: 'Insira o código de verificação',
-      icon: 'lock',
-      subtitle: `Nós enviamos um SMS contendo o código para
+      icon: 'code',
+      isMultipleInput: true,
+      subtitle: `Nós enviamos um SMS contendo o código para:
         +55XXXXXXXXXX`,
       type: 'password',
       secureTextEntry: true,
@@ -53,7 +54,7 @@ const Signup = props => {
       goToStep: 0,
       tabTitle: 'Escolha uma senha',
       customBanner: <SelectPasswordBanner />,
-      icon: 'phone',
+      icon: 'lock',
       subtitle:
         'Escolha uma senha segura, não compartilhe sua senha com ningúem.',
       placeholder: 'Senha',
@@ -89,6 +90,7 @@ const Signup = props => {
               icon={step && step.icon}
               title={step && step.title}
               subtitle={step && step.subtitle}
+              isMultipleInput={step && step.isMultipleInput}
               placeholder={step && step.placeholder}
               confirmPlaceholder={step && step.confirmPlaceholder}
               type={step && step.type}

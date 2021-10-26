@@ -5,12 +5,13 @@ function SelectPasswordBanner(props) {
   return (
 
     <Svg
-      width={263}
-      height={344}
+      width={263*0.7}
+      height={344*0.7}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
-    >
+      viewBox="0 0 263 344"
+      preserveAspectRatio="none">
       <Path
         d="M226.179 76.724c-30.322-26.497-71.366 0-111.243 55.758-39.877 55.758-58.839 32.292-92.737 56.867-33.899 24.575-42.965 125.244 76.466 115.457 119.432-9.787 206.779-158.911 127.514-228.082z"
         fill="#F0F0F0"

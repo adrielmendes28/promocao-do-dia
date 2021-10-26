@@ -72,6 +72,7 @@ const InternalButton = styled.Text`
 
 const EnvolveLogo = styled.View`
   margin: 55px 0 0 0;
+  
 `;
 
 const ContainerBackground = styled.ImageBackground`

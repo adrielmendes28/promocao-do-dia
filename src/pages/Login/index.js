@@ -15,7 +15,7 @@ const Login = props => {
     {
       number: 1,
       setStep: setStep,
-      backToStep: 1,
+      backToStep: 0,
       goToStep: 2,
       createAccountButton: true,
       customBanner: <MainLogoBanner />,
@@ -35,7 +35,7 @@ const Login = props => {
       setStep: setStep,
       backToStep: 1,
       goToStep: 1,
-      tabTitle: '',
+      tabTitle: 'Acesso a sua conta',
       createAccountButton: false,
       customBanner: <PasswordBanner />,
       title: 'Insira a sua senha',

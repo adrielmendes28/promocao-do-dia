@@ -4,11 +4,13 @@ import Svg, {Path} from 'react-native-svg';
 function PasswordBanner(props) {
   return (
     <Svg
-      width={313}
-      height={306}
+      width={313*0.75}
+      height={306*0.75}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
+      {...props}
+      viewBox="0 0 313 306"
+      preserveAspectRatio="none">
       <Path
         d="M298.198 96.612c-5.875 46.847-46.915 93.615-92.05 123.734-116.64 78.468-229.4-54.683-200.958-102.505 21.35-48.505 87.947-35.182 116.277-54.25C280.694-44.34 303.719 57.403 298.198 96.611z"
         fill="#F5F5F5"

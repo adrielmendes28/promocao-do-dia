@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import {
   Header,
   MainTitle,
@@ -13,11 +13,18 @@ import {
 } from '../styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import * as RootNavigation from '../../../RootNavigation.js';
+import HeaderBar from '~/pages/Signup/HeaderBar';
 
-const LoginStep = (props) => {
-  
+const LoginStep = props => {
   return (
     <>
+      {props && props.backToStep > 0 && (
+        <HeaderBar
+          title={props && props.tabTitle}
+          setStep={props && props.setStep}
+          backToStep={props && props.backToStep}
+        />
+      )}
       <EnvolveLogo>{props && props.customBanner}</EnvolveLogo>
       <Header>
         <MainTitle>{props && props.title}</MainTitle>
