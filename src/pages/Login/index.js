@@ -26,6 +26,7 @@ const Login = props => {
       type: 'text',
       icon: 'phone',
       secureTextEntry: false,
+      toHome: false,
       value: telefone,
       setValue: setTelefone,
       keyboardType: 'numeric',
@@ -41,6 +42,7 @@ const Login = props => {
       title: 'Insira a sua senha',
       subtitle: `Digite a senha que utilizou na criação da sua conta, ela pode conter números e letras`,
       placeholder: 'Insira sua senha',
+      toHome: true,
       nextButtonText: 'Acessar',
       type: 'password',
       icon: 'lock',
@@ -68,6 +70,7 @@ const Login = props => {
               nextButtonText={step && step.nextButtonText}
               backToStep={step && step.backToStep}
               goToStep={step && step.goToStep}
+              toHome={step && step.toHome}
               tabTitle={step && step.tabTitle}
               createAccountButton={step && step.createAccountButton}
               customBanner={step && step.customBanner}

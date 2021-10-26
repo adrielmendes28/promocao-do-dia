@@ -48,6 +48,7 @@ const LoginStep = props => {
       <Footer>
         <MainButton
           onPress={() => {
+            if(props && props.toHome)  props && props.navigation.navigate('Home');
             props && props.setStep(props.goToStep);
           }}>
           <InternalButton>{props && props.nextButtonText}</InternalButton>
