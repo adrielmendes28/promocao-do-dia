@@ -7,25 +7,20 @@ const MainTitle = styled.Text`
 `;
 
 const Container = styled.View`
-  margin-top:40px;
-  padding:0 10px;
-  width:100%;
-`
+  margin-top: 40px;
+  padding: 0 10px;
+  width: 100%;
+`;
 
 const TopHeader = styled.View`
   flex-direction: row;
-  width:100%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-`
+`;
 
 const ButtonNotification = styled.TouchableOpacity`
-  color:grey;
-`
+  color: grey;
+`;
 
-export {  
-  MainTitle,
-  Container, 
-  TopHeader,
-  ButtonNotification
-};
+export {MainTitle, Container, TopHeader, ButtonNotification};

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {
   Header,
   MainTitle,
@@ -6,6 +6,7 @@ import {
   InputField,
   MultipleInputField,
   Input,
+  InputInvisible,
   InputCode,
   EnvolveLogo,
   FullContent,
@@ -17,11 +18,18 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import HeaderBar from '../HeaderBar';
 
 const SignupStep = props => {
+  const inputRef = useRef(null);
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <FullContent>
-      <HeaderBar title={props && props.tabTitle} setStep={
-            props && props.setStep} backToStep={
-              props && props.backToStep}/>
+      <HeaderBar
+        title={props && props.tabTitle}
+        setStep={props && props.setStep}
+        backToStep={props && props.backToStep}
+      />
       <EnvolveLogo>{props && props.customBanner}</EnvolveLogo>
       <Header>
         <MainTitle>{props && props.title}</MainTitle>
@@ -29,6 +37,18 @@ const SignupStep = props => {
         <SubTitle>{props && props.subtitle}</SubTitle>
         {props && props.isMultipleInput && (
           <MultipleInputField>
+             <InputInvisible
+              ref={inputRef}
+              editable
+              placeholder={props && props.placeholder}
+              type={props && props.inputType}
+              keyboardType={props && props.keyboardType}
+              secureTextEntry={props && props.secureTextEntry}
+              placeholderTextColor="grey"
+              onChangeText={text => props && props.setValue(text)}
+              value={props && props.value}
+              maxLength={40}
+            />
             <InputCode
               editable
               type={props && props.inputType}
@@ -75,6 +95,7 @@ const SignupStep = props => {
           <InputField>
             <Icon name={props && props.icon} size={20} color="grey" />
             <Input
+              ref={inputRef}
               editable
               placeholder={props && props.placeholder}
               type={props && props.inputType}

@@ -21,6 +21,15 @@ const Header = styled.ScrollView.attrs({
   width: 100%;
   flex: 1;
 `;
+const TopHeaderBar = styled.View`
+  width:100%;
+  flex-direction: row;
+  margin-top:40px;
+  align-items: center;
+  justify-content:space-between;
+  padding:0 15px;
+`
+
 const TabTitle = styled.Text`
   font-size: 22px;
   font-weight: bold;
@@ -73,6 +82,10 @@ const Input = styled.TextInput`
   margin-left: 15px;
   flex: 1;
 `;
+const InputInvisible = styled.TextInput`
+  height:0;
+  opacity:0;
+`;
 const Footer = styled.View`
   width: 100%;
 `;
@@ -120,15 +133,6 @@ const ContainerBackground = styled.ImageBackground`
   flex-direction: column;
 `;
 
-const TopHeaderBar = styled.View`
-  width:100%;
-  flex-direction: row;
-  margin-top:40px;
-  align-items: center;
-  justify-content:space-between;
-  padding:0 15px;
-`
-
 
 export {
   Container,
@@ -145,5 +149,6 @@ export {
   InternalButton,
   EnvolveLogo,
   ContainerBackground,
-  TopHeaderBar
+  TopHeaderBar,
+  InputInvisible
 };

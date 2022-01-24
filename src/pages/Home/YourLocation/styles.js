@@ -27,17 +27,17 @@ const IconCircle = styled.View`
   margin-right: 15px;
   width: 50px;
   height: 50px;
-  justify-content:center;
-  align-items:center;
-  border-radius:100px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
 `;
 
 const Content = styled.View`
-flex:1;`;
+  flex: 1;
+`;
 
 const IconChange = styled.TouchableOpacity`
   color: grey;
-  
 `;
 
 const InputField = styled.View`
@@ -45,9 +45,10 @@ const InputField = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   border-radius: 5px;
   margin-top: 20px;
+  margin-left:5px;
+  margin-right:5px;
   padding: 5px 15px;
   padding-left: 20px;
 `;
@@ -55,4 +56,13 @@ const Input = styled.TextInput`
   margin-left: 15px;
   flex: 1;
 `;
-export {InputField, Input, Container, IconCircle, Content, MainTitle, Subtitle, IconChange};
+export {
+  Container,
+  IconCircle,
+  Content,
+  MainTitle,
+  Subtitle,
+  IconChange,
+  InputField,
+  Input,
+};

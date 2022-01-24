@@ -1,32 +1,54 @@
 import React from 'react';
 import {
   Container,
-  IconCircle,
-  Content,
-  MainTitle,
   Subtitle,
-  IconChange,
-  InputField,
-  Input,
-  BannerBig
+  BannerBig,
+  BannerMini,
+  BannerGroup,
+  BannerBlank,
 } from './styles';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const AdBanners = props => {
   return (
     <Container>
+      <BannerGroup>
+        <BannerMini>
+          <Subtitle>Espaço disponível</Subtitle>
+        </BannerMini>
+        <BannerMini>
+          <Subtitle>Espaço disponível</Subtitle>
+        </BannerMini>
+      </BannerGroup>
+
       <BannerBig>
-        <Subtitle>Anuncie arquivo</Subtitle>
+        <Subtitle>Espaço disponível</Subtitle>
       </BannerBig>
 
-      
+      <BannerGroup>
+        <BannerMini>
+          <Subtitle>Espaço disponível</Subtitle>
+        </BannerMini>
+        <BannerMini>
+          <Subtitle>Espaço disponível</Subtitle>
+        </BannerMini>
+      </BannerGroup>
       <BannerBig>
-        <Subtitle>Anuncie arquivo</Subtitle>
+        <Subtitle>Espaço disponível</Subtitle>
       </BannerBig>
-      
+
+      <BannerGroup>
+        <BannerMini>
+          <Subtitle>Espaço disponível</Subtitle>
+        </BannerMini>
+        <BannerMini>
+          <Subtitle>Espaço disponível</Subtitle>
+        </BannerMini>
+      </BannerGroup>
       <BannerBig>
-        <Subtitle>Anuncie arquivo</Subtitle>
+        <Subtitle>Espaço disponível</Subtitle>
       </BannerBig>
+
+      <BannerBlank />
     </Container>
   );
 };

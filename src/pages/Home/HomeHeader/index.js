@@ -1,8 +1,7 @@
 import React from 'react';
 import {MainTitle, Container, TopHeader, ButtonNotification} from './styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import * as RootNavigation from '../../../RootNavigation.js';
-import HeaderBar from '~/pages/Signup/HeaderBar';
+
 
 const HomeHeader = props => {
   return (

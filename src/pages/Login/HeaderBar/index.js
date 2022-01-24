@@ -1,19 +1,8 @@
 import React from 'react';
 import {
-  Header,
   TabTitle,
-  SubTitle,
-  InputField,
-  MultipleInputField,
-  Input,
-  InputCode,
-  EnvolveLogo,
-  FullContent,
-  Footer,
-  MainButton,
-  InternalButton,
   TopHeaderBar,
-} from '../styles';
+} from './styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const HeaderBar = props => {

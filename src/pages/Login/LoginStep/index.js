@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef,useEffect} from 'react';
 import {
   Header,
   MainTitle,
@@ -12,10 +12,14 @@ import {
   InternalButton,
 } from '../styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import * as RootNavigation from '../../../RootNavigation.js';
 import HeaderBar from '~/pages/Signup/HeaderBar';
 
 const LoginStep = props => {
+  const inputRef = useRef(null);
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <>
       {props && props.backToStep > 0 && (
@@ -32,6 +36,7 @@ const LoginStep = props => {
         <InputField>
           <Icon name={props && props.icon} size={20} color="grey" />
           <Input
+            ref={inputRef}
             editable
             placeholder={props && props.placeholder}
             type={props && props.inputType}
@@ -48,7 +53,8 @@ const LoginStep = props => {
       <Footer>
         <MainButton
           onPress={() => {
-            if(props && props.toHome)  props && props.navigation.navigate('Home');
+            if (props && props.toHome)
+              props && props.navigation.navigate('Home');
             props && props.setStep(props.goToStep);
           }}>
           <InternalButton>{props && props.nextButtonText}</InternalButton>
